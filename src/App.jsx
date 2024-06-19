@@ -1,4 +1,5 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { useState } from 'react';
 
 // IMPORT LAYOUTS
 import PlainLayout from './layouts/plainLayout/plainLayout';
@@ -7,6 +8,10 @@ import PlainLayout from './layouts/plainLayout/plainLayout';
 import Homepage from './pages/homepage/homepage';
 import ErrorPage from './pages/error/error';
 import Shop from './pages/shop/shop';
+import ProductDetail from './pages/productDetail/productDetail';
+
+// IMPORT CONTEXTS
+import { ShopContext } from './ShopContexts';
 
 // IMPORT MAIN CSS TO LAYOUT
 import './assets/styles/global.css';
@@ -22,12 +27,17 @@ const router = createBrowserRouter([
       // RENDER element INSIDE <Outlet /> OF PARENT COMPONENT (LAYOUT) WHEN path REQUESTED
       { path: '/', element: <Homepage /> },
       { path: '/shop', element: <Shop /> },
+      { path: '/product/:id', element: <ProductDetail /> },
     ],
   },
 ]);
 
 export default function App() {
+  const [cart, setCart] = useState([]);
+
   return (
-    <RouterProvider router={router} />
+    <ShopContext.Provider value={{ cart, setCart }}>
+      <RouterProvider router={router} />
+    </ShopContext.Provider>
   );
 }

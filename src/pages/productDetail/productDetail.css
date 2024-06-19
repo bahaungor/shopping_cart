@@ -1,0 +1,36 @@
+.productDetail {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.detailContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+}
+.productDetail .imgContainer {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+.productDetail .title {
+  font-size: 2rem;
+}
+
+.productDetail button {
+  border: var(--border);
+  color: var(--text);
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0px auto;
+}
+
+.productDetail button:hover {
+  background-color: var(--bg3);
+}

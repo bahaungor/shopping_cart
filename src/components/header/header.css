@@ -28,6 +28,7 @@ header img {
   gap: 20px;
   position: absolute;
   right: 30px;
+  font-size: 1.4rem;
 }
 .links * {
   text-decoration: none;
@@ -36,6 +37,20 @@ header img {
 .hamburger {
   display: none;
   cursor: pointer;
+}
+.ShoppingBag {
+  cursor: pointer;
+}
+.cartItems {
+  background-color: var(--text);
+  color: var(--bg2);
+  text-align: center;
+  border-radius: 50%;
+  width: 27px;
+  position: absolute;
+  top: 20px;
+  right: -20px;
+  font-size: 1.3rem;
 }
 
 /* Mobile devices (smaller than 680px) */
