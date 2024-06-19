@@ -1,0 +1,50 @@
+header {
+  padding: 50px;
+  font-family: var(--font);
+  border-bottom: var(--border);
+  background-color: var(--bg2);
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+.header {
+  font-weight: 900;
+  text-decoration: none;
+  color: inherit;
+}
+header img {
+  width: 50px;
+}
+.links {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  right: 30px;
+}
+.links * {
+  text-decoration: none;
+  color: inherit;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+/* Mobile devices (smaller than 680px) */
+@media screen and (max-width: 680px) {
+  .HomeBtn,
+  .ShopBtn {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}

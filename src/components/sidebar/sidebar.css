@@ -1,0 +1,28 @@
+.sidebar {
+  position: fixed;
+  top: 101px; /* Adjust this value to leave space for the header */
+  left: 0;
+  width: 250px;
+  height: calc(
+    100% - 150px
+  ); /* Adjust this value to leave space for both header & footer */
+  background-color: var(--bg2); /* Adjust background color as needed */
+  padding-top: 20px; /* Adjust padding as needed */
+  display: flex;
+  flex-direction: column;
+  z-index: 100; /* Ensure sidebar is above content */
+  overflow-y: auto; /* Enable scrollbar if content exceeds sidebar height */
+}
+
+.sidebar a {
+  padding: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Mobile devices (larger than 650px) */
+@media screen and (min-width: 650px) {
+  .sidebar {
+    display: none;
+  }
+}

@@ -1,0 +1,46 @@
+.shopProducts {
+  display: grid;
+  gap: 15rem 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+  padding: 50px;
+  max-width: 1500px;
+  margin: 90px auto;
+}
+
+.product {
+  height: 400px; /* Fixed height for product items */
+  display: flex;
+  flex-direction: column;
+  justify-content: end; /* Center content vertically */
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.product img {
+  max-width: 100%; /* Ensure image fits within its container */
+  max-height: 100%; /* Ensure image fits within its container */
+  width: auto; /* Ensure image maintains aspect ratio */
+  height: auto; /* Ensure image maintains aspect ratio */
+}
+
+.product .priceRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.product button {
+  background-color: var(--text);
+  color: var(--bg);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}

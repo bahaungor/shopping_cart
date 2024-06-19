@@ -1,0 +1,25 @@
+.blackBannerContainer {
+  background-color: var(--text);
+  overflow: hidden; /* Hide scroll bar during animation */
+}
+
+.blackBanner {
+  font-size: min(calc(23vw - 7vh), 3.5rem);
+  color: var(--bg);
+}
+
+.scrollThis {
+  text-align: right;
+  white-space: nowrap;
+  animation: my-animation 15s linear infinite;
+}
+
+/* Style your animation */
+@keyframes my-animation {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
