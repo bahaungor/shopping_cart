@@ -47,31 +47,36 @@ export default function ProductDetail() {
   const cartItem = cart.find(item => item.product.id === product.id);
   const quantityInCart = cartItem ? cartItem.quantity : 0;
 
-  return (
-    <div className="productDetail">
-      <div className="imgContainer"><img src={product.image} alt="product image" /></div>
-      <div className="detailContainer">
-        <div className="title">
-          {product.title}
-          {' '}
-          -
-          {' '}
-          {product.price}
-          $
+  return (product.title
+    ? (
+      <div className="productDetail">
+        <div className="imgContainer"><img src={product.image} alt="product image" /></div>
+        <div className="detailContainer">
+          <div className="title">
+            {product.title}
+            {' '}
+            -
+            {' '}
+            {product.price}
+            $
+          </div>
+          <div className="description">{product.description}</div>
+          {quantityInCart > 0
+            ? (
+              <div className="quantityButtons">
+                <button type="button" onClick={() => decreaseQuantity(product)}>−</button>
+                <div className="quantity">{quantityInCart}</div>
+                <button type="button" onClick={() => addToCart(product)}>+</button>
+              </div>
+              )
+            : (
+              <button type="button" onClick={() => addToCart(product)}>Add to Cart</button>
+              )}
         </div>
-        <div className="description">{product.description}</div>
-        {quantityInCart > 0
-          ? (
-            <div className="quantityButtons">
-              <button type="button" onClick={() => decreaseQuantity(product)}>−</button>
-              <div className="quantity">{quantityInCart}</div>
-              <button type="button" onClick={() => addToCart(product)}>+</button>
-            </div>
-            )
-          : (
-            <button type="button" onClick={() => addToCart(product)}>Add to Cart</button>
-            )}
       </div>
-    </div>
+      )
+    : (
+      <div className="loading"><div className="spinner"></div></div>
+      )
   );
 }

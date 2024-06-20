@@ -9,6 +9,8 @@ import Homepage from './pages/homepage/homepage';
 import ErrorPage from './pages/error/error';
 import Shop from './pages/shop/shop';
 import ProductDetail from './pages/productDetail/productDetail';
+import Cart from './pages/cart/cart';
+import Thankyou from './pages/thankyou/thankyou';
 
 // IMPORT CONTEXTS
 import { ShopContext } from './ShopContexts';
@@ -28,6 +30,8 @@ const router = createBrowserRouter([
       { path: '/', element: <Homepage /> },
       { path: '/shop', element: <Shop /> },
       { path: '/product/:id', element: <ProductDetail /> },
+      { path: '/cart', element: <Cart /> },
+      { path: '/thank-you', element: <Thankyou /> },
     ],
   },
 ]);

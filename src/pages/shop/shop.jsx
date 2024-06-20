@@ -81,7 +81,9 @@ export default function Shop() {
             })
           )
         : (
-          <div>No Products Available</div>
+          <div className="loading">
+            <div className="spinner"></div>
+          </div>
           )}
     </div>
   );

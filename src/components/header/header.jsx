@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 // IMPORT CONTEXTS
 import { ShopContext } from '../../ShopContexts';
@@ -9,8 +9,16 @@ import ThemeSwitch from '../darkTheme/switch';
 import './header.css';
 
 export default function Header({ handleHamburgerClick }) {
+  const navigate = useNavigate();
+
   const { cart, setCart } = useContext(ShopContext);
 
+  function openCart() {
+    if (cart.length > 0) {
+      navigate('/cart');
+    }
+  }
+ 
   // YOU CAN USE STATE WHICH YOU ASSIGNED FETCHED DATA ABOVE
   return (
     <header>
@@ -23,7 +31,7 @@ export default function Header({ handleHamburgerClick }) {
         <Link to="/" className="HomeBtn">Home</Link>
         <Link to="/shop" className="ShopBtn">Shop</Link>
         <div className="hamburger" onClick={handleHamburgerClick}>☰</div>
-        <div className="ShoppingBag">
+        <div className="ShoppingBag" onClick={openCart}>
           🛒
           <div className="cartItems">{cart.length > 0 ? cart.length : ''}</div>
         </div>
