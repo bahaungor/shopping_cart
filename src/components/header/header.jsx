@@ -18,14 +18,14 @@ export default function Header({ handleHamburgerClick }) {
       navigate('/cart');
     }
   }
- 
+
   // YOU CAN USE STATE WHICH YOU ASSIGNED FETCHED DATA ABOVE
   return (
     <header>
       <ThemeSwitch />
       <div className="logo">
         <Link to="/" className="header">FakeShop</Link>
-        <img src="/favicon.ico" alt="logo" />
+        <img src="./favicon.ico" alt="logo" />
       </div>
       <div className="links">
         <Link to="/" className="HomeBtn">Home</Link>

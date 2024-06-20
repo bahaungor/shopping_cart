@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 import { useState } from 'react';
 
 // IMPORT LAYOUTS
@@ -20,7 +20,7 @@ import './assets/styles/global.css';
 import './assets/styles/reset.css';
 
 // DEFINE WHICH REACT PAGE TO SERVE WHEN CERTAIN ROUTE REQ.
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/', // PARENT PATH SHOULD START FROM ROOT
     element: <PlainLayout />, // PARENT COMPONENT (LAYOUT)

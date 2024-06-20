@@ -1,6 +1,7 @@
 .productPlacer {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   justify-content: center;
   align-items: center;
   padding: 50px;
@@ -16,15 +17,21 @@
   justify-content: center;
   gap: 20px;
   font-size: 1.5rem;
-  min-width: 400px;
+  min-width: 200px;
 }
 .textCol .title {
   font-size: 2rem;
   font-weight: 700;
 }
 
+.homeImgCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .productPlacer img {
-  max-width: 400px;
+  max-width: 300px;
   width: 100%;
   height: auto;
 }

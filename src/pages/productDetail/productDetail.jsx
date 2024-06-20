@@ -49,7 +49,7 @@ export default function ProductDetail() {
 
   return (product.title
     ? (
-      <div className="productDetail">
+      <div className="productDetailContainer">
         <div className="imgContainer"><img src={product.image} alt="product image" /></div>
         <div className="detailContainer">
           <div className="title">

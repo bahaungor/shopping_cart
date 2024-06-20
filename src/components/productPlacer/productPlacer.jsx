@@ -17,7 +17,7 @@ export default function ProductPlacer({ position = 'left', num = 0, title = 'Thi
         position === 'left'
           ? (
             <div className="productPlacer">
-              <img src={products[num].image} alt="product image" />
+              <div className="homeImgCont"><img src={products[num].image} alt="product image" /></div>
               <div className="textCol">
                 <div className="title">{title}</div>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -40,7 +40,7 @@ export default function ProductPlacer({ position = 'left', num = 0, title = 'Thi
                 reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                 Excepteur sint occaecat cupidatat non proident.
               </div>
-              <img src={products[num].image} alt="product image" />
+              <div className="homeImgCont"><img src={products[num].image} alt="product image" /></div>
             </div>
             )
       )}
